@@ -17,7 +17,9 @@ const compile = async function () {
 
 (async function () {
   try {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+      headless: "new",
+    });
     const page = await browser.newPage();
     const content = await compile();
 

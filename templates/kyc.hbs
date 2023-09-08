@@ -1,59 +1,129 @@
-<style>
-  .kyc { max-width: 794px; /* max-width: 700px; */ margin-inline: auto;
-  font-family: "Noto Sans Devanagari", sans-serif; font-size: 0.9rem;
-  font-kerning: none; -webkit-font-smoothing: none; -moz-osx-font-smoothing:
-  none; letter-spacing: 0px; font-smooth: never; text-align: justify; } /*
-  pre-body */ .kyc__header { position: relative; } .kyc__header-photo {
-  position: absolute; top: 0; right: 0; display: flex; border: 1px solid black;
-  padding: 1rem; width: 2.2cm; height: 2.3cm; align-items: center;
-  justify-content: center; } .kyc__callout { border: 1px solid black;
-  padding-block: 0.02cm; vertical-align: center; } .kyc__grid { display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr; column-gap: 0.1cm; margin-top: 5px; }
-  .kyc__grid .kyc__p { font-size: 0.75rem !important; line-height: 0.9rem; }
-  .kyc__p.sub { font-size: 1rem !important; margin-top: 4px; } .kyc__cell {
-  display: flex; /* grid-template-columns: auto 60%; */ } .kyc__field { border:
-  1px solid black; margin-left: 5px; width: 100%; flex-grow: 1; flex-basis: 0; }
-  .name .kyc__ir { grid-template-columns: 1.25fr 3.75fr; } .name .kyc__ic.label
-  { border-right: 1px solid black; } .dob .kyc__ir { grid-template-columns:
-  1.8fr 4.1fr 4.1fr; } .dob .kyc__ic.value { display: flex; align-items: center;
-  } .gender .kyc__ir { grid-template-columns: 1.8fr 8.2fr; } .gender
-  .kyc__ic.value { display: grid; grid-template-columns: 1fr 2fr; } .nationality
-  .kyc__ir { grid-template-columns: 1.8fr 8.2fr; } .nationality .kyc__ic.value {
-  display: grid; grid-template-columns: 1fr 2fr; } .citizenship .kyc__ir {
-  grid-template-columns: 1.75fr 2fr 1.75fr 2fr 1.5fr 2fr; } .beneficiary
-  .kyc__ir { grid-template-columns: 3fr 7fr; } .beneficiary .value { display:
-  grid; grid-template-columns: repeat(17, 1fr); } .pan .kyc__ir {
-  grid-template-columns: 3fr 7fr; } .pan .value { display: grid;
-  grid-template-columns: repeat(17, 1fr); } .nrn .kyc__ir {
-  grid-template-columns: 3fr 7fr; } .country-province .kyc__ir {
-  grid-template-columns: 1fr 4fr 1fr 4fr; } .district .kyc__ir {
-  grid-template-columns: 1fr 9fr; } .city-ward .kyc__ir { grid-template-columns:
-  4fr 3fr 1fr 2fr; } .tole-tele .kyc__ir { grid-template-columns: 1fr 5fr 2fr
-  2fr; } .email-mobile .kyc__ir { grid-template-columns: 1fr 5fr 2fr 2fr; }
-  .province-district .kyc__ir { grid-template-columns: 1fr 4fr 1fr 4fr; }
-  .city-tole .kyc__ir { grid-template-columns: 4fr 3fr 1fr 2fr; }
-  .telephone-ward-block .kyc__ir { grid-template-columns: 1.5fr 3fr 1.5fr 1fr
-  1.5fr 1fr; } /* Globals */ .kyc__container { padding: 1rem; } .val__c {
-  display: flex; align-items: center; } .checkbox { display: block; width:
-  1.25rem; height: 1.25rem; border: 1px solid black; margin-left: 10px; }
-  .kyc__block-val { border-right: 1px solid black; padding: 2px; height: 100%;
-  min-width: 1.25rem; text-align: center; text-transform: uppercase; font-size:
-  0.8rem; } .kyc__p { font-size: 0.8rem !important; line-height: 1rem;
-  text-align: left; } @media print { .kyc__block-val { border-right: 1px solid
-  black; padding: 2px; height: 100%; min-width: 1.1rem; text-align: center;
-  text-transform: uppercase; font-size: 0.8rem; } } .bb { border-bottom: 1px
-  solid black; } .br { border-right: 1px solid black; } .np { padding: 0
-  !important; display: flex; } .kyc__ic { padding: 3px 4px; } .kyc__ig { border:
-  1px solid; } .kyc__ir { display: grid; } .kyc__ig+.kyc__ig { margin-top: -1px;
-  } .kyc__empty { display: inline-block; min-width: 4rem; border-bottom: black
-  1px dotted; } .kyc__empty.medium { width: 10rem; } .kyc__empty.large { width:
-  30rem; } p { margin-bottom: 0px !important; } @media print { .page {
-  page-break-before: always; } }.text-center{text-align: center;}
-</style>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; } .kyc { max-width:
+      794px; margin-inline: auto; font-family: "Inter", sans-serif; font-size:
+      0.9rem; font-kerning: none; -webkit-font-smoothing: none;
+      -moz-osx-font-smoothing: none; letter-spacing: 0px; font-smooth: never;
+      text-align: justify; } /* pre-body */ .kyc__header { position: relative; }
+      .kyc__header-photo { position: absolute; top: 0; right: 0; display: flex;
+      border: 1px solid black; padding: 1rem; width: 2.2cm; height: 2.3cm;
+      align-items: center; justify-content: center; } .kyc__callout { border:
+      1px solid black; padding-block: 0.02cm; vertical-align: center; }
+      .kyc__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+      column-gap: 0.1cm; margin-top: 5px; } .kyc__grid .kyc__p { font-size:
+      0.75rem !important; line-height: 0.9rem; } .kyc__p.sub { font-size: 1rem
+      !important; margin-top: 4px; } .kyc__cell { display: flex; /*
+      grid-template-columns: auto 60%; */ } .kyc__field { border: 1px solid
+      black; margin-left: 5px; width: 100%; flex-grow: 1; flex-basis: 0; } .name
+      .kyc__ir { grid-template-columns: 1.25fr 3.75fr; } .name .kyc__ic.label {
+      border-right: 1px solid black; } .dob .kyc__ir { grid-template-columns:
+      1.8fr 4.1fr 4.1fr; } .dob .kyc__ic.value { display: flex; align-items:
+      center; } .gender .kyc__ir { grid-template-columns: 1.8fr 8.2fr; } .gender
+      .kyc__ic.value { display: grid; grid-template-columns: 1fr 2fr; }
+      .nationality .kyc__ir { grid-template-columns: 1.8fr 8.2fr; } .nationality
+      .kyc__ic.value { display: grid; grid-template-columns: 1fr 2fr; }
+      .citizenship .kyc__ir { grid-template-columns: 1.75fr 2fr 1.75fr 2fr 1.5fr
+      2fr; } .beneficiary .kyc__ir { grid-template-columns: 3fr 7fr; }
+      .beneficiary .value { display: grid; grid-template-columns: repeat(17,
+      1fr); } .pan .kyc__ir { grid-template-columns: 3fr 7fr; } .pan .value {
+      display: grid; grid-template-columns: repeat(17, 1fr); } .nrn .kyc__ir {
+      grid-template-columns: 3fr 7fr; } .country-province .kyc__ir {
+      grid-template-columns: 1fr 4fr 1fr 4fr; } .district .kyc__ir {
+      grid-template-columns: 1fr 9fr; } .city-ward .kyc__ir {
+      grid-template-columns: 4fr 3fr 1fr 2fr; } .tole-tele .kyc__ir {
+      grid-template-columns: 1fr 5fr 2fr 2fr; } .email-mobile .kyc__ir {
+      grid-template-columns: 1fr 5fr 2fr 2fr; } .province-district .kyc__ir {
+      grid-template-columns: 1fr 4fr 1fr 4fr; } .city-tole .kyc__ir {
+      grid-template-columns: 4fr 3fr 1fr 2fr; } .telephone-ward-block .kyc__ir {
+      grid-template-columns: 1.5fr 3fr 1.5fr 1fr 1.5fr 1fr; } .grandfather
+      .kyc__ir { grid-template-columns: 2.5fr 7.5fr; } .father .kyc__ir {
+      grid-template-columns: 2.5fr 7.5fr; } .mother .kyc__ir {
+      grid-template-columns: 2.5fr 7.5fr; } .spouse .kyc__ir {
+      grid-template-columns: 2.5fr 7.5fr; } .son .kyc__ir {
+      grid-template-columns: 2.5fr 7.5fr; } .daughter .kyc__ir {
+      grid-template-columns: 2.5fr 7.5fr; } .daughter-in-law .kyc__ir {
+      grid-template-columns: 2.5fr 7.5fr; } .father-in-law .kyc__ir {
+      grid-template-columns: 2.5fr 7.5fr; } .father-in-law .nepali {
+      grid-template-columns: 3fr 7fr; } .mother-in-law .kyc__ir {
+      grid-template-columns: 2.5fr 7.5fr; } .mother-in-law .nepali {
+      grid-template-columns: 3fr 7fr; } .bank-number .kyc__ir {
+      grid-template-columns: 3fr 7fr; } .bank-name .kyc__ir {
+      grid-template-columns: 3fr 7fr; } .bank-type .value { display: grid;
+      grid-template-columns: 1fr 1fr; } .bank-type .kyc__ir {
+      grid-template-columns: 3fr 7fr; } .occupation .kyc__ir {
+      grid-template-columns: 1fr 8fr; } .occupation .value { display: grid;
+      grid-template-columns: repeat(7, 1fr); column-gap: 6px; } .occupation
+      .value .val__c { display: grid !important; grid-template-columns: 4fr 1fr;
+      } .occupation .value .val__c:nth-child(3) { grid-column: span 2; }
+      .occupation .value .val__c:nth-child(4) { grid-column: span 2; }
+      .occupation .value .val__c .label .kyc__p { font-size: 0.6rem !important;
+      } .business-type .kyc__ir { grid-template-columns: 2fr 8fr; }
+      .business-type .value { display: grid; grid-template-columns: 1fr 1fr 1fr;
+      } .org-address .kyc__ir { grid-template-columns: 2.5fr 3fr 1fr 3.5fr; }
+      .designation-id .kyc__ir { grid-template-columns: 2fr 2fr 3fr 3fr; }
+      @media print { .grandfather .kyc__ir { grid-template-columns: 2.75fr
+      7.25fr; } .father .kyc__ir { grid-template-columns: 2.75fr 7.25fr; }
+      .mother .kyc__ir { grid-template-columns: 2.75fr 7.25fr; } .spouse
+      .kyc__ir { grid-template-columns: 2.75fr 7.25fr; } .son .kyc__ir {
+      grid-template-columns: 2.75fr 7.25fr; } .daughter .kyc__ir {
+      grid-template-columns: 2.75fr 7.25fr; } .daughter-in-law .kyc__ir {
+      grid-template-columns: 2.75fr 7.25fr; } .father-in-law .kyc__ir {
+      grid-template-columns: 2.75fr 7.25fr; } .father-in-law .nepali {
+      grid-template-columns: 4fr 6fr !important; } .mother-in-law .nepali {
+      grid-template-columns: 4fr 6fr !important; } .mother-in-law .kyc__ir {
+      grid-template-columns: 2.75fr 7.25fr; } } /* Globals */ .muted {
+      font-size: 0.6rem; font-family: "Roboto Condensed", sans-serif;
+      font-stretch: condensed; } .kyc__container { padding: 1rem; } .val__c {
+      display: flex; align-items: center; } .checkbox { display: block; width:
+      1.25rem; height: 1.25rem; border: 1px solid black; margin-left: 10px; }
+      .kyc__block-val { border-right: 1px solid black; padding: 2px; height:
+      100%; min-width: 1.25rem; text-align: center; text-transform: uppercase;
+      font-size: 0.8rem; } .kyc__block-val:last-child,
+      .kyc__block-val:nth-child(28) { border-right: none; }
+      .kyc__block-val:nth-child(n + 29) { border-top: 1px solid black; } .kyc__p
+      { font-size: 0.8rem !important; line-height: 1rem; text-align: left; }
+      @media print { .kyc__block-val { border-right: 1px solid black; padding:
+      2px; height: 100%; min-width: 1.1rem; text-align: center; text-transform:
+      uppercase; font-size: 0.8rem; } } .bb { border-bottom: 1px solid black; }
+      .br { border-right: 1px solid black; } .np { padding: 0 !important;
+      display: grid; grid-template-columns: repeat(28, 1fr); } .r2 {
+      grid-template-rows: 1fr 1fr; } .kyc__ic { padding: 3px 4px; } .kyc__ig {
+      border: 1px solid; } .kyc__ir { display: grid; } .kyc__ig + .kyc__ig {
+      margin-top: -1px; } .kyc__empty { display: inline-block; min-width: 4rem;
+      border-bottom: black 1px dotted; } .kyc__empty.medium { width: 10rem; }
+      .kyc__empty.large { width: 30rem; } p { margin-bottom: 0px !important; }
+      .page { page-break-before: always; break-inside: avoid; } @media print {
+      .page { page-break-before: always; break-inside: avoid; } }
+    </style>
+    <title>KYC</title>
+  </head>
   <body>
     <div class="kyc">
-      {{! Page 1 }}
+      <!-- Page 1 -->
       <div class="page">
         <div class="kyc__container">
           <div class="kyc__header">
@@ -63,7 +133,9 @@
               </span>
             </div>
             <p class="kyc__p text-center">अनुसूची - १२</p>
-            <p class="kyc__p text-center">(नियम २९ को उपनियम (१) सँग सम्बन्धित)</p>
+            <p class="kyc__p text-center">
+              (नियम २९ को उपनियम (१) सँग सम्बन्धित)
+            </p>
             <p class="kyc__p mt-2 text-center">
               <u>प्राकृतिक व्यक्तिको परिचय विवरण </u>
             </p>
@@ -117,22 +189,41 @@
                 <div class="kyc__ic label bb">
                   <p class="kyc__p">नाम:</p>
                 </div>
-                <div class="kyc__ic value bb">{{"अन्वेष दाहाल"}}</div>
+                <div class="kyc__ic value bb">अन्वेष दाहाल</div>
               </div>
               <div class="kyc__ir english">
                 <div class="kyc__ic label">
                   <p class="kyc__p">Name in (Block Letter):</p>
                 </div>
                 <div class="kyc__ic value np">
-                  {{!-- <span
-                    class="kyc__block-val"
-                    v-for="ch in 28"
-                    :key="ch"
-                  >{{"Anwesh Dahal"}}</span> --}}
-                  {{!-- {{#range 1 28}}
-                    {{"Anwe"}}
-                  {{/range}} --}}
-                  {{"Anwesh Dahal"}}
+                  <span class="kyc__block-val">J</span>
+                  <span class="kyc__block-val">E</span>
+                  <span class="kyc__block-val">A</span>
+                  <span class="kyc__block-val">N</span>
+                  <span class="kyc__block-val">-</span>
+                  <span class="kyc__block-val">M</span>
+                  <span class="kyc__block-val">I</span>
+                  <span class="kyc__block-val">C</span>
+                  <span class="kyc__block-val">H</span>
+                  <span class="kyc__block-val">E</span>
+                  <span class="kyc__block-val">L</span>
+                  <span class="kyc__block-val"> </span>
+                  <span class="kyc__block-val">B</span>
+                  <span class="kyc__block-val">A</span>
+                  <span class="kyc__block-val">S</span>
+                  <span class="kyc__block-val">Q</span>
+                  <span class="kyc__block-val">U</span>
+                  <span class="kyc__block-val">I</span>
+                  <span class="kyc__block-val">A</span>
+                  <span class="kyc__block-val">T</span>
+                  <span class="kyc__block-val"></span>
+                  <span class="kyc__block-val"></span>
+                  <span class="kyc__block-val"></span>
+                  <span class="kyc__block-val"></span>
+                  <span class="kyc__block-val"></span>
+                  <span class="kyc__block-val"></span>
+                  <span class="kyc__block-val"></span>
+                  <span class="kyc__block-val"></span>
                 </div>
               </div>
             </div>
@@ -148,14 +239,14 @@
                     <p class="kyc__p">बि.स.</p>
                     <p class="kyc__p">B.S.</p>
                   </div>
-                  <p class="kyc__p ml-6">{{"2056/09/18"}}</p>
+                  <p class="kyc__p ml-6">2056/09/18</p>
                 </div>
                 <div class="kyc__ic value">
                   <div>
                     <p class="kyc__p">ई.स.</p>
                     <p class="kyc__p">A.D</p>
                   </div>
-                  <p class="kyc__p ml-6">{{"2000/01/02"}}</p>
+                  <p class="kyc__p ml-6">2000/01/02</p>
                 </div>
               </div>
             </div>
@@ -173,7 +264,7 @@
 
                       <p class="kyc__p">Male:</p>
                     </div>
-                    <div class="checkbox">{{"✓"}}</div>
+                    <div class="checkbox">✓</div>
                   </div>
                   <div class="val__c">
                     <div class="label">
@@ -200,7 +291,7 @@
 
                       <p class="kyc__p">Nepalese:</p>
                     </div>
-                    <div class="checkbox">{{"✓"}}</div>
+                    <div class="checkbox">✓</div>
                   </div>
                   <div class="val__c">
                     <div class="label">
@@ -220,17 +311,17 @@
                   <p class="kyc__p">नागिरिकता नम्बर:</p>
                   <p class="kyc__p">Citizenship No.:</p>
                 </div>
-                <div class="kyc__ic value br">{{"01-01-11-12345"}}</div>
+                <div class="kyc__ic value br">01-01-11-12345</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">जारी जिल्ला:</p>
                   <p class="kyc__p">Issued District:</p>
                 </div>
-                <div class="kyc__ic value br">{{"Morang"}}</div>
+                <div class="kyc__ic value br">Morang</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">जारी मिति:</p>
                   <p class="kyc__p">Issued Date:</p>
                 </div>
-                <div class="kyc__ic value">{{"2080/01/01"}}</div>
+                <div class="kyc__ic value">2080/01/01</div>
               </div>
             </div>
             <!-- Beneficiary -->
@@ -242,11 +333,8 @@
                   <p class="kyc__p">Beneficiary ID No.:</p>
                 </div>
                 <p class="kyc__ic value np">
-                  <span
-                    class="kyc__block-val"
-                    v-for="ch in 16"
-                    :key="ch"
-                  >{{"0192837465135790"}}</span>
+                  <span class="kyc__block-val" v-for="ch in 16" :key="ch">
+                    0</span>
                 </p>
               </div>
             </div>
@@ -259,11 +347,8 @@
                   <p class="kyc__p">Permanent Account No. (PAN):</p>
                 </div>
                 <p class="kyc__ic value np">
-                  <span
-                    class="kyc__block-val"
-                    v-for="ch in 16"
-                    :key="ch"
-                  >{{"0192837465135790"}}</span>
+                  <span class="kyc__block-val" v-for="ch in 16" :key="ch">
+                    0</span>
                 </p>
               </div>
             </div>
@@ -276,16 +361,18 @@
                   </p>
                 </div>
                 <div class="kyc__ic value">
-                  <p class="kyc__p">{{"19039735"}}</p>
-                  <p
-                    class="kyc__p"
-                  >{{"Sympli, 1211 31st St NW, Washington, DC 20007"}}</p>
+                  <p class="kyc__p">19039735</p>
+                  <p class="kyc__p">
+                    Sympli, 1211 31st St NW, Washington, DC 20007
+                  </p>
                 </div>
               </div>
             </div>
             <!--  -->
             <!-- Current Address -->
-            <p class="kyc__p mt-2"><strong>हालको ठेगाना (Current Address)</strong></p>
+            <p class="kyc__p mt-2">
+              <strong>हालको ठेगाना (Current Address)</strong>
+            </p>
             <!-- Country + Province -->
             <div class="kyc__ig country-province">
               <div class="kyc__ir">
@@ -294,13 +381,13 @@
 
                   <p class="kyc__p">Country:</p>
                 </div>
-                <div class="kyc__ic value br">{{"Nepal"}}</div>
+                <div class="kyc__ic value br">Nepal</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">प्रदेश:</p>
 
                   <p class="kyc__p">Province:</p>
                 </div>
-                <div class="kyc__ic value"> {{"Koshi Province"}}</div>
+                <div class="kyc__ic value">Koshi Province</div>
               </div>
             </div>
             <!-- District -->
@@ -311,7 +398,7 @@
 
                   <p class="kyc__p">District:</p>
                 </div>
-                <div class="kyc__ic value">{{"Morang"}}</div>
+                <div class="kyc__ic value">Morang</div>
               </div>
             </div>
             <!-- City + Ward -->
@@ -325,13 +412,13 @@
                     Metropolitan City:
                   </p>
                 </div>
-                <div class="kyc__ic value br">{{"Biratnagar"}}</div>
+                <div class="kyc__ic value br">Biratnagar</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">वडा न.:</p>
 
                   <p class="kyc__p">Ward No.:</p>
                 </div>
-                <div class="kyc__ic value">{{"15"}}</div>
+                <div class="kyc__ic value">15</div>
               </div>
             </div>
             <!-- Tole + Telephone -->
@@ -342,13 +429,13 @@
 
                   <p class="kyc__p">Tole:</p>
                 </div>
-                <div class="kyc__ic value br">{{"Haleshimarga"}}</div>
+                <div class="kyc__ic value br">Haleshimarga</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">टेलीफोन न.:</p>
 
                   <p class="kyc__p">Telephone No.:</p>
                 </div>
-                <div class="kyc__ic value">{{"021-524446"}}</div>
+                <div class="kyc__ic value">021-524446</div>
               </div>
             </div>
             <!-- Email + Mobile -->
@@ -359,13 +446,13 @@
 
                   <p class="kyc__p">E-Mail ID:</p>
                 </div>
-                <div class="kyc__ic value br">{{"anweshd2000@gmail.com"}}</div>
+                <div class="kyc__ic value br">anweshd2000@gmail.com</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">मोबाइल न.:</p>
 
                   <p class="kyc__p">Mobile No.:</p>
                 </div>
-                <div class="kyc__ic value">{{"9842085129"}}</div>
+                <div class="kyc__ic value">9842085129</div>
               </div>
             </div>
             <!-- Permanent Address -->
@@ -380,13 +467,13 @@
 
                   <p class="kyc__p">Province:</p>
                 </div>
-                <div class="kyc__ic value br">{{"Koshi Province"}}</div>
+                <div class="kyc__ic value br">Koshi Province</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">जिल्ला:</p>
 
                   <p class="kyc__p">District:</p>
                 </div>
-                <div class="kyc__ic value">{{"Morang"}}</div>
+                <div class="kyc__ic value">Morang</div>
               </div>
             </div>
             <!-- City + Tole -->
@@ -400,13 +487,13 @@
                     Metropolitan City:
                   </p>
                 </div>
-                <div class="kyc__ic value br">{{"Biratnagar"}}</div>
+                <div class="kyc__ic value br">Biratnagar</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">टोल:</p>
 
                   <p class="kyc__p">Tole:</p>
                 </div>
-                <div class="kyc__ic value">{{"Haleshimarga"}}</div>
+                <div class="kyc__ic value">Haleshimarga</div>
               </div>
             </div>
             <!-- Telephone + Ward + Block -->
@@ -417,24 +504,762 @@
 
                   <p class="kyc__p">Telephone No.:</p>
                 </div>
-                <div class="kyc__ic value br">{{"021-524446"}}</div>
+                <div class="kyc__ic value br">021-524446</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">वडा न.:</p>
 
                   <p class="kyc__p">Ward No.:</p>
                 </div>
-                <div class="kyc__ic value br">{{"2"}}</div>
+                <div class="kyc__ic value br">2</div>
                 <div class="kyc__ic label br">
                   <p class="kyc__p">ब्लक नं.:</p>
 
                   <p class="kyc__p">Block No.:</p>
                 </div>
-                <div class="kyc__ic value">{{"17A"}}</div>
+                <div class="kyc__ic value">17A</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Page 2 -->
+      <div class="page">
+        <div class="kyc__container">
+          <!-- Family Details -->
+          <p class="kyc__p">
+            <strong>परिवारका सदस्यहरुको विवरण (ठाउँ नपुग भएमा थप गर्न सकिने)</strong>
+          </p>
+
+          <p class="kyc__p"><strong>Details of Family Members</strong></p>
+          <!-- Grandfather -->
+          <div class="kyc__ig grandfather">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">बजेको नाम:</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">Grand Father’s Name</p>
+              </div>
+              <div class="kyc__ic value np">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Father -->
+          <div class="kyc__ig father">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">बुबाको नाम:</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">
+                  Father’s Name
+                  <span class="muted">(in Block Letters):</span>
+                </p>
+              </div>
+              <div class="kyc__ic value np">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Mother -->
+          <div class="kyc__ig mother">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">आमाको नाम:</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">
+                  Mother’s Name
+                  <span class="muted">(in Block Letters):</span>
+                </p>
+              </div>
+              <div class="kyc__ic value np">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Spouse -->
+          <div class="kyc__ig spouse">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">पति पत्नीको नाम:</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">
+                  Spouse’s Name
+                  <span class="muted">(in Block Letters):</span>
+                </p>
+              </div>
+              <div class="kyc__ic value np">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Son -->
+          <div class="kyc__ig son">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">छोराको नाम:</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">
+                  Son’s Name
+                  <span class="muted">(in Block Letters):</span>
+                </p>
+              </div>
+              <div class="kyc__ic value np r2">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span><span
+                  class="kyc__block-val"
+                >J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Daughter -->
+          <div class="kyc__ig daughter">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">छोरीको नाम (अविवाहित):</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">
+                  Daughter’s Name
+                  <span class="muted">(in Block Letters):</span>
+                </p>
+              </div>
+              <div class="kyc__ic value np r2">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Daughter In Law -->
+          <div class="kyc__ig daughter-in-law">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">बुहारीको नाम:</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">
+                  Daughter-in-Law’s Name
+                  <span class="muted">(in Block Letters):</span>
+                </p>
+              </div>
+              <div class="kyc__ic value np r2">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Father In Law -->
+          <div class="kyc__ig father-in-law">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">ससुराको नाम (विवाहित महिलाको हकमा)</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">Father-in-Law’s Name :</p>
+              </div>
+              <div class="kyc__ic value np">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Mother in Law -->
+          <div class="kyc__ig mother-in-law">
+            <div class="kyc__ir nepali bb">
+              <div class="kyc__ic label">
+                <p class="kyc__p">सासुको नाम (विवाहित महिलाको हकमा)</p>
+              </div>
+              <div class="kyc__ic value">जेन मिशेल बास्किएट</div>
+            </div>
+            <div class="kyc__ir english">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">Mother-in-Law’s Name:</p>
+              </div>
+              <div class="kyc__ic value np">
+                <span class="kyc__block-val">J</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">N</span>
+                <span class="kyc__block-val">-</span>
+                <span class="kyc__block-val">M</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">C</span>
+                <span class="kyc__block-val">H</span>
+                <span class="kyc__block-val">E</span>
+                <span class="kyc__block-val">L</span>
+                <span class="kyc__block-val"> </span>
+                <span class="kyc__block-val">B</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">S</span>
+                <span class="kyc__block-val">Q</span>
+                <span class="kyc__block-val">U</span>
+                <span class="kyc__block-val">I</span>
+                <span class="kyc__block-val">A</span>
+                <span class="kyc__block-val">T</span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+                <span class="kyc__block-val"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Bank Account Details -->
+          <p class="kyc__p mt-4"><strong>बैंक खाताको विवरण:</strong></p>
+          <p class="kyc__p"><strong>Bank Account Details:</strong></p>
+          <!-- Bank Account Type  -->
+          <div class="kyc__ig bank-type">
+            <div class="kyc__ir">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">बैंक खाताको किसिम:</p>
+                <p class="kyc__p">Type of Bank Account:</p>
+              </div>
+              <div class="kyc__ic value">
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">बचत खाता:</p>
+
+                    <p class="kyc__p">Saving Account:</p>
+                  </div>
+                  <div class="checkbox">✓</div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">चल्ती खाता:</p>
+
+                    <p class="kyc__p">Current Account:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bank Account Number -->
+          <div class="kyc__ig bank-number">
+            <div class="kyc__ir">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">बैंक खाता नम्बर:</p>
+                <p class="kyc__p">Bank Account Number:</p>
+              </div>
+              <div class="kyc__ic value">1112223334P</div>
+            </div>
+          </div>
+          <!-- Bank Name -->
+          <div class="kyc__ig bank-name">
+            <div class="kyc__ir">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">बैंक खाता भएको बैंकको नाम र ठेगाना:</p>
+                <p class="kyc__p">Name & Address of Bank:</p>
+              </div>
+              <div class="kyc__ic value">
+                Standard Chartered Bank Nepal Limited
+              </div>
+            </div>
+          </div>
+          <!-- Occupation Details -->
+          <p class="kyc__p mt-4"><strong>पेसागत विवरण</strong></p>
+          <p class="kyc__p"><strong>Details of Occupation</strong></p>
+          <!-- Occupation -->
+          <div class="kyc__ig occupation">
+            <div class="kyc__ir">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">पेशा:</p>
+                <p class="kyc__p">Occupation:</p>
+              </div>
+              <div class="kyc__ic value">
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">सेवा:</p>
+
+                    <p class="kyc__p">Service:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">सरकारी:</p>
+
+                    <p class="kyc__p">Govt.:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">सामाजिक/ निजि क्षेत्र :</p>
+
+                    <p class="kyc__p">Public/Private Sector:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">एन.जी.ओ./आई.न.जी.ओ:</p>
+
+                    <p class="kyc__p">NGO/INGO:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">विशेषज्ञ:</p>
+
+                    <p class="kyc__p">Expert:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">व्यापारी:</p>
+
+                    <p class="kyc__p">Businessperson:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">कृषि:</p>
+
+                    <p class="kyc__p">Agriculture:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">सेवा निवृत्त:</p>
+
+                    <p class="kyc__p">Retired:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">गृहिणी:</p>
+
+                    <p class="kyc__p">House Wife:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">विद्यार्थी:</p>
+
+                    <p class="kyc__p">Student:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">अन्य:</p>
+
+                    <p class="kyc__p">Others:</p>
+                  </div>
+                  <div class="checkbox">✓</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Business Type -->
+          <div class="kyc__ig business-type">
+            <div class="kyc__ir">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">व्यापारको प्रकार:</p>
+                <p class="kyc__p">Types of Business:</p>
+              </div>
+              <div class="kyc__ic value">
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">उत्पादन:</p>
+
+                    <p class="kyc__p">Manufacturing:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">सेवामुखी:</p>
+
+                    <p class="kyc__p">Service Oriented:</p>
+                  </div>
+                  <div class="checkbox">✓</div>
+                </div>
+                <div class="val__c">
+                  <div class="label">
+                    <p class="kyc__p">अन्य:</p>
+
+                    <p class="kyc__p">Others:</p>
+                  </div>
+                  <div class="checkbox"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Organization Name + Address -->
+          <div class="kyc__ig org-address">
+            <div class="kyc__ir">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">संस्थाको नाम:</p>
+
+                <p class="kyc__p">Organization’s Name:</p>
+              </div>
+              <div class="kyc__ic value br">Acme Co.</div>
+              <div class="kyc__ic label br">
+                <p class="kyc__p">ठेगाना:</p>
+
+                <p class="kyc__p">Address:</p>
+              </div>
+              <div class="kyc__ic value">Kupondole, Lalitpur, Nepal</div>
+            </div>
+          </div>
+          <!-- Designation + ID Number -->
+          <div class="kyc__ig designation-id">
+            <div class="kyc__ir">
+              <div class="kyc__ic label br">
+                <p class="kyc__p">पद:</p>
+
+                <p class="kyc__p">Designation:</p>
+              </div>
+              <div class="kyc__ic value br">Developer</div>
+              <div class="kyc__ic label br">
+                <p class="kyc__p">कर्मचारीको हकमा कर्मचारी परिचयपत्र नं.:</p>
+
+                <p class="kyc__p">(ID No. of Employee):</p>
+              </div>
+              <div class="kyc__ic value">19039735</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
