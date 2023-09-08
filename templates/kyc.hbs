@@ -1,0 +1,440 @@
+<style>
+  .kyc { max-width: 794px; /* max-width: 700px; */ margin-inline: auto;
+  font-family: "Noto Sans Devanagari", sans-serif; font-size: 0.9rem;
+  font-kerning: none; -webkit-font-smoothing: none; -moz-osx-font-smoothing:
+  none; letter-spacing: 0px; font-smooth: never; text-align: justify; } /*
+  pre-body */ .kyc__header { position: relative; } .kyc__header-photo {
+  position: absolute; top: 0; right: 0; display: flex; border: 1px solid black;
+  padding: 1rem; width: 2.2cm; height: 2.3cm; align-items: center;
+  justify-content: center; } .kyc__callout { border: 1px solid black;
+  padding-block: 0.02cm; vertical-align: center; } .kyc__grid { display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr; column-gap: 0.1cm; margin-top: 5px; }
+  .kyc__grid .kyc__p { font-size: 0.75rem !important; line-height: 0.9rem; }
+  .kyc__p.sub { font-size: 1rem !important; margin-top: 4px; } .kyc__cell {
+  display: flex; /* grid-template-columns: auto 60%; */ } .kyc__field { border:
+  1px solid black; margin-left: 5px; width: 100%; flex-grow: 1; flex-basis: 0; }
+  .name .kyc__ir { grid-template-columns: 1.25fr 3.75fr; } .name .kyc__ic.label
+  { border-right: 1px solid black; } .dob .kyc__ir { grid-template-columns:
+  1.8fr 4.1fr 4.1fr; } .dob .kyc__ic.value { display: flex; align-items: center;
+  } .gender .kyc__ir { grid-template-columns: 1.8fr 8.2fr; } .gender
+  .kyc__ic.value { display: grid; grid-template-columns: 1fr 2fr; } .nationality
+  .kyc__ir { grid-template-columns: 1.8fr 8.2fr; } .nationality .kyc__ic.value {
+  display: grid; grid-template-columns: 1fr 2fr; } .citizenship .kyc__ir {
+  grid-template-columns: 1.75fr 2fr 1.75fr 2fr 1.5fr 2fr; } .beneficiary
+  .kyc__ir { grid-template-columns: 3fr 7fr; } .beneficiary .value { display:
+  grid; grid-template-columns: repeat(17, 1fr); } .pan .kyc__ir {
+  grid-template-columns: 3fr 7fr; } .pan .value { display: grid;
+  grid-template-columns: repeat(17, 1fr); } .nrn .kyc__ir {
+  grid-template-columns: 3fr 7fr; } .country-province .kyc__ir {
+  grid-template-columns: 1fr 4fr 1fr 4fr; } .district .kyc__ir {
+  grid-template-columns: 1fr 9fr; } .city-ward .kyc__ir { grid-template-columns:
+  4fr 3fr 1fr 2fr; } .tole-tele .kyc__ir { grid-template-columns: 1fr 5fr 2fr
+  2fr; } .email-mobile .kyc__ir { grid-template-columns: 1fr 5fr 2fr 2fr; }
+  .province-district .kyc__ir { grid-template-columns: 1fr 4fr 1fr 4fr; }
+  .city-tole .kyc__ir { grid-template-columns: 4fr 3fr 1fr 2fr; }
+  .telephone-ward-block .kyc__ir { grid-template-columns: 1.5fr 3fr 1.5fr 1fr
+  1.5fr 1fr; } /* Globals */ .kyc__container { padding: 1rem; } .val__c {
+  display: flex; align-items: center; } .checkbox { display: block; width:
+  1.25rem; height: 1.25rem; border: 1px solid black; margin-left: 10px; }
+  .kyc__block-val { border-right: 1px solid black; padding: 2px; height: 100%;
+  min-width: 1.25rem; text-align: center; text-transform: uppercase; font-size:
+  0.8rem; } .kyc__p { font-size: 0.8rem !important; line-height: 1rem;
+  text-align: left; } @media print { .kyc__block-val { border-right: 1px solid
+  black; padding: 2px; height: 100%; min-width: 1.1rem; text-align: center;
+  text-transform: uppercase; font-size: 0.8rem; } } .bb { border-bottom: 1px
+  solid black; } .br { border-right: 1px solid black; } .np { padding: 0
+  !important; display: flex; } .kyc__ic { padding: 3px 4px; } .kyc__ig { border:
+  1px solid; } .kyc__ir { display: grid; } .kyc__ig+.kyc__ig { margin-top: -1px;
+  } .kyc__empty { display: inline-block; min-width: 4rem; border-bottom: black
+  1px dotted; } .kyc__empty.medium { width: 10rem; } .kyc__empty.large { width:
+  30rem; } p { margin-bottom: 0px !important; } @media print { .page {
+  page-break-before: always; } }.text-center{text-align: center;}
+</style>
+<html>
+  <body>
+    <div class="kyc">
+      {{! Page 1 }}
+      <div class="page">
+        <div class="kyc__container">
+          <div class="kyc__header">
+            <div class="kyc__header-photo">
+              <span class="kyc__label text-center">
+                फोटो (हालसालै खिचिएको)
+              </span>
+            </div>
+            <p class="kyc__p text-center">अनुसूची - १२</p>
+            <p class="kyc__p text-center">(नियम २९ को उपनियम (१) सँग सम्बन्धित)</p>
+            <p class="kyc__p mt-2 text-center">
+              <u>प्राकृतिक व्यक्तिको परिचय विवरण </u>
+            </p>
+            <p class="kyc__p text-center"><u>Details of Natural Person</u></p>
+          </div>
+          <div class="kyc__prebody mt-5">
+            <p class="kyc__callout text-center">
+              कार्यालय प्रयोजनको लागि मात्र (For Official Use Only)
+            </p>
+            <div class="kyc__grid">
+              <div class="kyc__cell">
+                <div class="kyc__label-stack">
+                  <p class="kyc__p">Client’s Account No.</p>
+                  <p class="kyc__p">ग्राहक नं.:</p>
+                </div>
+                <div class="kyc__field"></div>
+              </div>
+              <div class="kyc__cell">
+                <div class="kyc__label-stack">
+                  <p class="kyc__p">Date</p>
+                  <p class="kyc__p">मिति:</p>
+                </div>
+                <div class="kyc__field"></div>
+              </div>
+              <div class="kyc__cell">
+                <div class="kyc__label-stack">
+                  <p class="kyc__p">Reference No.</p>
+                  <p class="kyc__p">संकेत नं.:</p>
+                </div>
+                <div class="kyc__field"></div>
+              </div>
+            </div>
+            <p class="kyc__p mt-2">
+              तल उल्लेखित सम्पूर्ण विवरण राम्रोसंग भर्नु पर्नेछ। आफुसंग सरोकार
+              नभएको विवरण उल्लेख गर्ने कोठामा धर्का तानी दिनुहोला।
+            </p>
+
+            <p class="kyc__p sub">
+              <strong>भृकुटी स्टक ब्रोकिङ्ग कम्पनि प्रा. लि.</strong>
+            </p>
+
+            <p class="kyc__p"><span class="kyc__empty medium"></span> (शाखा)</p>
+          </div>
+          <div class="kyc__body mt-3">
+            <p class="kyc__p">
+              <strong>ग्राहकको विवरण (Details of Client)</strong>
+            </p>
+            <!-- Name -->
+            <div class="kyc__ig name">
+              <div class="kyc__ir nepali">
+                <div class="kyc__ic label bb">
+                  <p class="kyc__p">नाम:</p>
+                </div>
+                <div class="kyc__ic value bb">{{"अन्वेष दाहाल"}}</div>
+              </div>
+              <div class="kyc__ir english">
+                <div class="kyc__ic label">
+                  <p class="kyc__p">Name in (Block Letter):</p>
+                </div>
+                <div class="kyc__ic value np">
+                  {{!-- <span
+                    class="kyc__block-val"
+                    v-for="ch in 28"
+                    :key="ch"
+                  >{{"Anwesh Dahal"}}</span> --}}
+                  {{!-- {{#range 1 28}}
+                    {{"Anwe"}}
+                  {{/range}} --}}
+                  {{"Anwesh Dahal"}}
+                </div>
+              </div>
+            </div>
+            <!-- Date of Birth -->
+            <div class="kyc__ig dob">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">जन्म मिति:</p>
+                  <p class="kyc__p">Date of Birth:</p>
+                </div>
+                <div class="kyc__ic value br">
+                  <div>
+                    <p class="kyc__p">बि.स.</p>
+                    <p class="kyc__p">B.S.</p>
+                  </div>
+                  <p class="kyc__p ml-6">{{"2056/09/18"}}</p>
+                </div>
+                <div class="kyc__ic value">
+                  <div>
+                    <p class="kyc__p">ई.स.</p>
+                    <p class="kyc__p">A.D</p>
+                  </div>
+                  <p class="kyc__p ml-6">{{"2000/01/02"}}</p>
+                </div>
+              </div>
+            </div>
+            <!-- Gender -->
+            <div class="kyc__ig gender">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">लिङ्ग:</p>
+                  <p class="kyc__p">Gender:</p>
+                </div>
+                <div class="kyc__ic value">
+                  <div class="val__c">
+                    <div class="label">
+                      <p class="kyc__p">पुरुष:</p>
+
+                      <p class="kyc__p">Male:</p>
+                    </div>
+                    <div class="checkbox">{{"✓"}}</div>
+                  </div>
+                  <div class="val__c">
+                    <div class="label">
+                      <p class="kyc__p">महिला:</p>
+
+                      <p class="kyc__p">Female:</p>
+                    </div>
+                    <div class="checkbox"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Nationality -->
+            <div class="kyc__ig nationality">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">राष्ट्रियता:</p>
+                  <p class="kyc__p">Nationality:</p>
+                </div>
+                <div class="kyc__ic value">
+                  <div class="val__c">
+                    <div class="label">
+                      <p class="kyc__p">नेपाली:</p>
+
+                      <p class="kyc__p">Nepalese:</p>
+                    </div>
+                    <div class="checkbox">{{"✓"}}</div>
+                  </div>
+                  <div class="val__c">
+                    <div class="label">
+                      <p class="kyc__p">अन्य (खुलाउने):</p>
+
+                      <p class="kyc__p">Others (if any):</p>
+                    </div>
+                    <div class="checkbox"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Citizenship -->
+            <div class="kyc__ig citizenship">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">नागिरिकता नम्बर:</p>
+                  <p class="kyc__p">Citizenship No.:</p>
+                </div>
+                <div class="kyc__ic value br">{{"01-01-11-12345"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">जारी जिल्ला:</p>
+                  <p class="kyc__p">Issued District:</p>
+                </div>
+                <div class="kyc__ic value br">{{"Morang"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">जारी मिति:</p>
+                  <p class="kyc__p">Issued Date:</p>
+                </div>
+                <div class="kyc__ic value">{{"2080/01/01"}}</div>
+              </div>
+            </div>
+            <!-- Beneficiary -->
+            <div class="kyc__ig beneficiary">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">हित्ग्राही खाता नम्बर:</p>
+
+                  <p class="kyc__p">Beneficiary ID No.:</p>
+                </div>
+                <p class="kyc__ic value np">
+                  <span
+                    class="kyc__block-val"
+                    v-for="ch in 16"
+                    :key="ch"
+                  >{{"0192837465135790"}}</span>
+                </p>
+              </div>
+            </div>
+            <!-- PAN -->
+            <div class="kyc__ig pan">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">स्थायी लेखा नम्बर:</p>
+
+                  <p class="kyc__p">Permanent Account No. (PAN):</p>
+                </div>
+                <p class="kyc__ic value np">
+                  <span
+                    class="kyc__block-val"
+                    v-for="ch in 16"
+                    :key="ch"
+                  >{{"0192837465135790"}}</span>
+                </p>
+              </div>
+            </div>
+            <!-- NRN -->
+            <div class="kyc__ig nrn">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">
+                    गैरआवासीय नेपालीको हकमा परिचयपत्र नं. र ठेगाना
+                  </p>
+                </div>
+                <div class="kyc__ic value">
+                  <p class="kyc__p">{{"19039735"}}</p>
+                  <p
+                    class="kyc__p"
+                  >{{"Sympli, 1211 31st St NW, Washington, DC 20007"}}</p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <!-- Current Address -->
+            <p class="kyc__p mt-2"><strong>हालको ठेगाना (Current Address)</strong></p>
+            <!-- Country + Province -->
+            <div class="kyc__ig country-province">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">देश:</p>
+
+                  <p class="kyc__p">Country:</p>
+                </div>
+                <div class="kyc__ic value br">{{"Nepal"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">प्रदेश:</p>
+
+                  <p class="kyc__p">Province:</p>
+                </div>
+                <div class="kyc__ic value"> {{"Koshi Province"}}</div>
+              </div>
+            </div>
+            <!-- District -->
+            <div class="kyc__ig district">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">जिल्ला:</p>
+
+                  <p class="kyc__p">District:</p>
+                </div>
+                <div class="kyc__ic value">{{"Morang"}}</div>
+              </div>
+            </div>
+            <!-- City + Ward -->
+            <div class="kyc__ig city-ward">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">गा.पा./ न.पा./ उ.म.न.पा./ म.न.पा.:</p>
+
+                  <p class="kyc__p">
+                    Rural Municipality/ Municipality/ Sub Metropolitan City/
+                    Metropolitan City:
+                  </p>
+                </div>
+                <div class="kyc__ic value br">{{"Biratnagar"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">वडा न.:</p>
+
+                  <p class="kyc__p">Ward No.:</p>
+                </div>
+                <div class="kyc__ic value">{{"15"}}</div>
+              </div>
+            </div>
+            <!-- Tole + Telephone -->
+            <div class="kyc__ig tole-tele">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">टोल:</p>
+
+                  <p class="kyc__p">Tole:</p>
+                </div>
+                <div class="kyc__ic value br">{{"Haleshimarga"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">टेलीफोन न.:</p>
+
+                  <p class="kyc__p">Telephone No.:</p>
+                </div>
+                <div class="kyc__ic value">{{"021-524446"}}</div>
+              </div>
+            </div>
+            <!-- Email + Mobile -->
+            <div class="kyc__ig email-mobile">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">ईमेल:</p>
+
+                  <p class="kyc__p">E-Mail ID:</p>
+                </div>
+                <div class="kyc__ic value br">{{"anweshd2000@gmail.com"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">मोबाइल न.:</p>
+
+                  <p class="kyc__p">Mobile No.:</p>
+                </div>
+                <div class="kyc__ic value">{{"9842085129"}}</div>
+              </div>
+            </div>
+            <!-- Permanent Address -->
+            <p class="kyc__p mt-2">
+              <strong>स्थायी ठेगाना (Permanent Address)</strong>
+            </p>
+            <!-- Province + District -->
+            <div class="kyc__ig province-district">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">प्रदेश:</p>
+
+                  <p class="kyc__p">Province:</p>
+                </div>
+                <div class="kyc__ic value br">{{"Koshi Province"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">जिल्ला:</p>
+
+                  <p class="kyc__p">District:</p>
+                </div>
+                <div class="kyc__ic value">{{"Morang"}}</div>
+              </div>
+            </div>
+            <!-- City + Tole -->
+            <div class="kyc__ig city-tole">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">गा.पा./ न.पा./ उ.म.न.पा./ म.न.पा.:</p>
+
+                  <p class="kyc__p">
+                    Rural Municipality/ Municipality/ Sub Metropolitan City/
+                    Metropolitan City:
+                  </p>
+                </div>
+                <div class="kyc__ic value br">{{"Biratnagar"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">टोल:</p>
+
+                  <p class="kyc__p">Tole:</p>
+                </div>
+                <div class="kyc__ic value">{{"Haleshimarga"}}</div>
+              </div>
+            </div>
+            <!-- Telephone + Ward + Block -->
+            <div class="kyc__ig telephone-ward-block">
+              <div class="kyc__ir">
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">टेलीफोन न.:</p>
+
+                  <p class="kyc__p">Telephone No.:</p>
+                </div>
+                <div class="kyc__ic value br">{{"021-524446"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">वडा न.:</p>
+
+                  <p class="kyc__p">Ward No.:</p>
+                </div>
+                <div class="kyc__ic value br">{{"2"}}</div>
+                <div class="kyc__ic label br">
+                  <p class="kyc__p">ब्लक नं.:</p>
+
+                  <p class="kyc__p">Block No.:</p>
+                </div>
+                <div class="kyc__ic value">{{"17A"}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
